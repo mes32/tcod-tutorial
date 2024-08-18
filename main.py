@@ -30,6 +30,9 @@ def main() -> None:
 
             context.present(root_console)
 
+            # Clear the console to prepare for the next print loop
+            root_console.clear()
+
             for event in tcod.event.wait():
                 action = event_handler.dispatch(event)
 
